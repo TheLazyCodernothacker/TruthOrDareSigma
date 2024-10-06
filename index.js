@@ -114,6 +114,14 @@ const commands = [
     name: "newgame",
     description: "Start a new game with rules and skips",
   },
+  {
+    name: "customdares",
+    description: "Get a list of custom dares",
+  },
+  {
+    name: "customtruths",
+    description: "Get a list of custom truths",
+  },
 ];
 
 let customDares = [];
@@ -262,6 +270,12 @@ client.on("interactionCreate", async (interaction) => {
     case "todog":
       tod = Math.random() < 0.5 ? "truth" : "dare";
       truthOrDare(tod, interaction, data[tod + "s"], "og");
+      break;
+    case "customdares":
+      interaction.user.send(customDares.join("\n"));
+      break;
+    case "customtruths":
+      interaction.user.send(customTruths.join("\n"));
       break;
     case "add":
       const type = interaction.options.get("type").value;
