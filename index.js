@@ -339,7 +339,7 @@ async function truthOrDare(tod, interaction, collection, type) {
   let randomTod = collection[Math.floor(Math.random() * collection.length)];
   const embed = new EmbedBuilder()
     .setTitle(randomTod)
-    .setDescription(header)
+    .setFooter(header)
     .setColor(0x0099ff);
   let component;
   if (type === "both") {
