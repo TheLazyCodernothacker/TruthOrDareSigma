@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "pm2 start index.js --name TruthOrDareSigma",
-    "update": "pm2 stop TruthOrDareSigma && git pull && pm2 start TruthOrDareSigma"
+    "start": "pm2 TruthOrDareSigma",
+    "update": "pm2 stop TruthOrDareSigma && git pull && pm2 start TruthOrDareSigma",
+    "stop": "pm2 stop TruthOrDareSigma"
   },
   "keywords": [],
   "author": "",
